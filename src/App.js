@@ -3,6 +3,7 @@ import { Component } from 'react';
 import ContactForm from './components/ContactForm/ContactForm';
 import ContactsList from './components/ContactsList/ContactsList';
 import Filter from './components/Filter/Filter';
+import Container from './components/Container/Container';
 
 export default class App extends Component {
   state = {
@@ -45,7 +46,7 @@ export default class App extends Component {
     const { filter } = this.state;
     const visibleContacts = this.getVisibleContacts();
     return (
-      <>
+      <Container>
         <h2>Form Contact</h2>
         <ContactForm
           onAdd={this.handleAddContact}
@@ -57,7 +58,7 @@ export default class App extends Component {
           contacts={visibleContacts}
           onRemove={this.handleRemoveContact}
         />
-      </>
+      </Container>
     );
   }
 }

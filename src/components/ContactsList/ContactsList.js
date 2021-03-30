@@ -6,7 +6,7 @@ const ContactListItem = ({ id, name, phone, onRemove }) => {
   );
 };
 
-const ContactList = ({ contacts, onRemove }) => {
+const ContactsList = ({ contacts, onRemove }) => {
   if (contacts.length === 0) return null;
   return (
     <ul>
@@ -16,4 +16,4 @@ const ContactList = ({ contacts, onRemove }) => {
     </ul>
   );
 };
-export default ContactList;
+export default ContactsList;
